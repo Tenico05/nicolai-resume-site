@@ -1,0 +1,85 @@
+:root {
+  --color-primary: #1D3557;        /* Navy Blue */
+  --color-secondary: #457B9D;      /* Teal */
+  --color-background: #FFFFFF;     /* White */
+  --color-background-alt: #F1FAEE; /* Light Gray */
+  --color-text: #6D6875;           /* Gray */
+  --color-text-light: #FFFFFF;     /* White */
+  --color-accent: #A8DADC;         /* Sky Blue */
+
+  --font-family: 'Arial', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+
+  --border-radius: 4px;
+
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-secondary);
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+.button {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.button:hover {
+  background-color: var(--color-primary);
+}
+
+.card {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+}
+
+.animated-background {
+  height: 100vh;
+  animation: gradientAnimation 15s ease infinite;
+  background: linear-gradient(-45deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent),
+    var(--color-background-alt));
+  background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
