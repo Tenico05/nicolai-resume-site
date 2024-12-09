@@ -1,11 +1,11 @@
 :root {
   --color-primary: #1D3557;        /* Navy Blue */
-  --color-secondary: #457B9D;      /* Teal */
+  --color-secondary: #2C5E8E;      /* Mid-tone Blue */
   --color-background: #FFFFFF;     /* White */
   --color-background-alt: #F1FAEE; /* Light Gray */
-  --color-text: #6D6875;           /* Gray */
+  --color-text: #1D3557;           /* Navy-ish Gray */
   --color-text-light: #FFFFFF;     /* White */
-  --color-accent: #A8DADC;         /* Sky Blue */
+  --color-accent: #A8DADC;         /* Light Sky Blue */
 
   --font-family: 'Arial', sans-serif;
   --font-size-base: 16px;
@@ -63,13 +63,7 @@ a:hover {
 
 .animated-background {
   height: 100vh;
-  animation: gradientAnimation 15s ease infinite;
-  background: linear-gradient(-45deg,
-    var(--color-primary),
-    var(--color-secondary),
-    var(--color-accent),
-    var(--color-background-alt));
-  background-size: 400% 400%;
+  background: radial-gradient(circle at center, var(--color-secondary) 0%, var(--color-primary) 100%);
 }
 
 @keyframes gradientAnimation {
@@ -82,4 +76,20 @@ a:hover {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
 }
