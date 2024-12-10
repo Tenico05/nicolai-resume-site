@@ -38,10 +38,11 @@ export default function Home() {
         }}
       >
         <Portrait />
-        <Typography variant="h2" sx={{ fontWeight: 'bold', color: 'var(--color-text-light)' }}>
-          Nicolai Medbø
+
+        <Typography variant="h3" sx={{ fontWeight: 'bold', color: 'var(--color-text-light)' }}>
+           Nicolai Medbø
         </Typography>
-        <Box sx={{ width: '50%', borderBottom: '2px solid var(--color-text-light)', my: 0 }} />
+          <Box sx={{ width: '50%', borderBottom: '2px solid var(--color-text-light)', my: 0 }} />
         
         <TypewriterContainer>
           {text}
