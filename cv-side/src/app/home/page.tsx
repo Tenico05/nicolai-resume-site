@@ -32,7 +32,7 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 4,
+          gap: 3,
           padding: 4,
           textAlign: 'center'
         }}
@@ -41,7 +41,7 @@ export default function Home() {
         <Typography variant="h2" sx={{ fontWeight: 'bold', color: 'var(--color-text-light)' }}>
           Nicolai Medbø
         </Typography>
-        <Box sx={{ width: '50%', borderBottom: '2px solid var(--color-text)', my: 2 }} />
+        <Box sx={{ width: '50%', borderBottom: '2px solid var(--color-text-light)', my: 0 }} />
         
         <TypewriterContainer>
           {text}
