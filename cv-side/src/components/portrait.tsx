@@ -1,13 +1,15 @@
 import Image from 'next/image'
-import { Box } from 'lucide-react'
 
 export default function Portrait(){
     return (
-        <Image
-                src="/portrait.jpg"
-                width={500}
-                height={500}
-                alt="Picture of Nicolai"
-        />
-    )
+        <div className="relative rounded-lg overflow-hidden">
+          <Image
+            src="/portrait.jpg"
+            width={500}
+            height={500}
+            style={{ objectFit: 'cover' }}
+            alt="Picture of Nicolai"
+          />
+        </div>
+      )
 }
