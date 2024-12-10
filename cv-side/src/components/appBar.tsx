@@ -18,7 +18,7 @@ import Typography from '@mui/material/Typography';
 
 const drawerWidth = 240;
 const navItems = [
-  { label: 'Home', path: '/' },
+  { label: 'Home', path: '/home' },
   { label: 'About', path: '/about' },
 ];
 

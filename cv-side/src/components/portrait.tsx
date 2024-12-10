@@ -5,8 +5,8 @@ export default function Portrait(){
         <div className="relative rounded-lg overflow-hidden">
           <Image
             src="/portrait.jpg"
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             style={{ objectFit: 'cover' }}
             alt="Picture of Nicolai"
           />

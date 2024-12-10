@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import DrawerAppBar from "@/components/appBar";
+import Footer from '@/components/footer'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <main style={{ marginTop: "64px" }}>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

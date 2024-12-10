@@ -93,3 +93,13 @@ a:hover {
 .floating {
   animation: float 3s ease-in-out infinite;
 }
+
+@keyframes typing {
+  0% { width: 0ch; }
+  99% { width: 70ch; border-right: 0.15em solid var(--color-text-light); }
+  100% { width: 70ch; border-right: none; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
