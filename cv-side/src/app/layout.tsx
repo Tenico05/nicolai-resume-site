@@ -26,15 +26,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ height: '100%' }}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ display: 'flex', flexDirection: 'column', minHeight: '100%' }}
       >
         <DrawerAppBar />
-        <main style={{ marginTop: "64px" }}>
-          {children}
-        </main>
-        <Footer />
+        <div className="animated-background" style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+          <main style={{ marginTop: "64px", flex: 1, display: 'flex', flexDirection: 'column' }}>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
