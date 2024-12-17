@@ -20,7 +20,7 @@ export default function Career() {
             backdropFilter: 'blur(6px)', 
             p: 3, 
             mb: 4, 
-            borderRadius: 2,
+            borderRadius: 0,
             color: 'var(--color-text-light)'
           }}
         >
@@ -52,7 +52,7 @@ export default function Career() {
             backdropFilter: 'blur(6px)', 
             p: 3, 
             mb: 4, 
-            borderRadius: 2,
+            borderRadius: 0,
             color: 'var(--color-text-light)'
           }}
         >
@@ -85,7 +85,7 @@ export default function Career() {
             backdropFilter: 'blur(6px)', 
             p: 3, 
             mb: 4, 
-            borderRadius: 2,
+            borderRadius: 0,
             color: 'var(--color-text-light)'
           }}
         >

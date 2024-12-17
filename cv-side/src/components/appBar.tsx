@@ -21,6 +21,7 @@ const navItems = [
   { label: 'Home', path: '/home' },
   { label: 'About', path: '/about' },
   { label: 'Career', path: '/career' },
+  { label: 'Preferences', path: '/preferences' },
 ];
 
 export default function DrawerAppBar() {
