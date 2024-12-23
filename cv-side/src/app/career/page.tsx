@@ -86,8 +86,12 @@ export default function Career() {
           </Typography>
           <Divider sx={{ borderColor: 'rgba(255,255,255,0.3)', mb: 2 }} />
           <Typography variant="body1" sx={{ lineHeight: 1.7, color: 'var(--color-text-light)' }}>
-            During my work at CEWE Japan Photo i'm responsible for providing customer service, product guidance, and photography advice. 
+            At CEWE Japan Photo i am responsible for providing customer service, product guidance, and photography advice. 
             I am also responsible for the cash register, shelfing new product, and fulfilling online orders.
+            <br />
+            <br />
+            The most valuable experience i have gained while working as a store employee is handling high stress situations like long lines during christmas,
+            and other holidays, and machinery malfuntions.
           </Typography>
         </Paper>
 
@@ -122,8 +126,23 @@ export default function Career() {
             Worked on developing a CMDB for managing Azure client data using a Spring Boot backend, Vue.js frontend, and a NoSQL Azure Cosmos database.
           </Typography>
           <Typography variant="body1" sx={{ lineHeight: 1.7, color: 'var(--color-text-light)' }}>
-            Embraced agile methodologies, participated in scrum ceremonies, and earned a Scrum Master certification. 
-            Developed both backend services for data processing and a frontend interface for visualizing the client data.
+            I worked on developing a CMDB (customer management database) for 
+            managing azure client data together with my bachelor group, our development team consisted of four porgramming students. We utilized a spring boot backend, along 
+            with a vue js frontend and a noSQL azure cosmos database.  
+            My role also involved agile methodologies, such as scrum organization, 
+            team meetings and general team structure.
+            <br />
+            Main Accomplishments:
+            <br />
+            - Successfully working in an agile environment following scrum
+            principles
+            <br />
+            - Completing a certified scrum master course
+            <br />
+            - Developing a working back-end that processes and sorts all azure
+            customer data
+            <br />
+            - Making a front-end web app to visually display the data
           </Typography>
         </Paper>
       </Container>
