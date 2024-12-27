@@ -55,7 +55,7 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
               />
               <Avatar
                 alt="Nicolai Medbø"
-                src="/placeholder.svg?height=150&width=150"
+                src="/headshot.png?height=100&width=100"
                 sx={{ width: 100, height: 100, position: 'relative', zIndex: 2 }}
               />
             </Box>
@@ -89,8 +89,8 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
               <Grid item xs={12} md={4}>
                 <Card>
                   <CardContent>
-                    <Code sx={{ fontSize: 40, mb: 1 }} />
-                    <Typography variant="h6">Programming</Typography>
+                    <Code sx={{ fontSize: 40}} />
+                    <Typography variant="h6">IT</Typography>
                     <Typography variant="body2">Passionate about coding and technology</Typography>
                   </CardContent>
                 </Card>
