@@ -2,12 +2,15 @@
 
 import React, { useState, useLayoutEffect } from "react";
 import "../styles/theme.css";
-import { Container, Box, Typography, Divider, Grow, Avatar, Card, CardContent, Grid, CircularProgress, ImageList, ImageListItem } from "@mui/material";
+import { 
+  Container, Box, Typography, Divider, Grow, Avatar, Card, CardContent, 
+  Grid, CircularProgress, ImageList, ImageListItem
+} from "@mui/material";
 import { motion } from "framer-motion";
-import { Code, Hiking, GolfCourse, Surfing } from '@mui/icons-material';
+import { Code, Hiking, GolfCourse, Surfing } from "@mui/icons-material";
 
 interface AboutContentProps {
-  imageData: Array<{ img: string; title: string }>;
+  imageData?: Array<{ img: string; title: string }>;
 }
 
 export default function AboutContent({ imageData = [] }: AboutContentProps) {
@@ -46,17 +49,17 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
                 size={120}
                 thickness={2}
                 sx={{
-                  position: 'absolute',
+                  position: "absolute",
                   top: -10,
                   left: -10,
                   zIndex: 1,
-                  color: 'primary.main',
+                  color: "primary.main",
                 }}
               />
               <Avatar
                 alt="Nicolai Medbø"
                 src="/headshot.png?height=100&width=100"
-                sx={{ width: 100, height: 100, position: 'relative', zIndex: 2 }}
+                sx={{ width: 100, height: 100, position: "relative", zIndex: 2 }}
               />
             </Box>
             <Typography
@@ -76,7 +79,13 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
         <Divider sx={{ borderColor: "rgba(255,255,255,0.3)", mb: 4 }} />
 
         <Grow in={showParagraphs} timeout={800}>
-          <Box sx={{ color: "var(--color-text-light)", lineHeight: 1.7, fontSize: "1rem" }}>
+          <Box
+            sx={{
+              color: "var(--color-text-light)",
+              lineHeight: 1.7,
+              fontSize: "1rem",
+            }}
+          >
             <Grid container spacing={4} alignItems="center">
               <Grid item xs={12} md={8}>
                 <Typography variant="body1" paragraph>
@@ -89,9 +98,11 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
               <Grid item xs={12} md={4}>
                 <Card>
                   <CardContent>
-                    <Code sx={{ fontSize: 40}} />
+                    <Code sx={{ fontSize: 40 }} />
                     <Typography variant="h6">IT</Typography>
-                    <Typography variant="body2">Passionate about coding and technology</Typography>
+                    <Typography variant="body2">
+                      Passionate about coding and technology
+                    </Typography>
                   </CardContent>
                 </Card>
               </Grid>
@@ -126,7 +137,9 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
                       <Surfing sx={{ fontSize: 40 }} />
                     </Box>
                     <Typography variant="h6">Outdoor Activities</Typography>
-                    <Typography variant="body2">Enjoy hiking, golfing, and surfing</Typography>
+                    <Typography variant="body2">
+                      Enjoy hiking, golfing, and surfing
+                    </Typography>
                   </CardContent>
                 </Card>
               </Grid>
@@ -143,14 +156,18 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
 
             {imageData.length > 0 && (
               <Box mt={4} mb={4}>
-                <ImageList sx={{ width: '100%', height: 'auto' }} cols={imageData.length === 1 ? 1 : 2} rowHeight={250}>
+                <ImageList
+                  sx={{ width: "100%", height: "auto" }}
+                  cols={imageData.length === 1 ? 1 : 2}
+                  rowHeight={250}
+                >
                   {imageData.map((item) => (
                     <ImageListItem key={item.img}>
                       <img
                         src={item.img}
                         alt={item.title}
                         loading="lazy"
-                        style={{ aspectRatio: '4/5', objectFit: 'cover' }}
+                        style={{ aspectRatio: "4/5", objectFit: "cover" }}
                       />
                     </ImageListItem>
                   ))}
