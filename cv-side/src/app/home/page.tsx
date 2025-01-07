@@ -1,23 +1,23 @@
 "use client";
 
-import React, { useState, useLayoutEffect } from 'react';
-import Typewriter from 'typewriter-effect';
-import Socials from '@/components/socials';
-import '../styles/theme.css';
-import Portrait from '@/components/portrait';
-import Contact from '@/components/contact';
-import { Box, Typography, Grow, Fade } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import React, { useState, useLayoutEffect } from "react";
+import Typewriter from "typewriter-effect";
+import Image from "next/image";
+import Socials from "@/components/socials";
+import "../styles/theme.css";
+import Contact from "@/components/contact";
+import { Box, Typography, Grow, Fade } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { motion } from "framer-motion";
 
 const text = `Welcome to my digital resume! Use the burger menu on the top left to navigate
 throughout the pages or click the buttons below!`;
 
-const TypewriterContainer = styled('div')(() => ({
-  width: '50%',
-  margin: '0 auto',
-  textAlign: 'center',
-  color: 'var(--color-text-light)',
+const TypewriterContainer = styled("div")(() => ({
+  width: "50%",
+  margin: "0 auto",
+  textAlign: "center",
+  color: "var(--color-text-light)",
 }));
 
 export default function Home() {
@@ -43,13 +43,13 @@ export default function Home() {
     <div className="animated-background">
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           gap: 3,
           padding: 4,
-          textAlign: 'center',
-          minHeight: '100vh',
+          textAlign: "center",
+          minHeight: "100vh",
         }}
       >
         <motion.div
@@ -58,19 +58,28 @@ export default function Home() {
           variants={fadeInUpVariants}
           transition={{ duration: 0.6 }}
         >
-          <Portrait />
+          {/* Inline Portrait Code */}
+          <div className="relative rounded-lg overflow-hidden">
+            <Image
+              src="/portrait.jpg"
+              width={400}
+              height={400}
+              style={{ objectFit: "cover" }}
+              alt="Picture of Nicolai"
+            />
+          </div>
         </motion.div>
 
         <Fade in={showContent} timeout={700}>
-          <Typography variant="h3" sx={{ fontWeight: 'bold', color: 'var(--color-text-light)' }}>
+          <Typography variant="h3" sx={{ fontWeight: "bold", color: "var(--color-text-light)" }}>
             Nicolai Medbø
           </Typography>
         </Fade>
 
         <Fade in={showContent} timeout={700}>
-          <Box sx={{ width: '50%', borderBottom: '2px solid var(--color-text-light)', my: 0 }} />
+          <Box sx={{ width: "50%", borderBottom: "2px solid var(--color-text-light)", my: 0 }} />
         </Fade>
-        
+
         <Grow in={showTypewriter} timeout={700}>
           <TypewriterContainer>
             <Typewriter
@@ -78,12 +87,12 @@ export default function Home() {
                 strings: [text],
                 autoStart: true,
                 delay: 50,
-                cursor: '|',
+                cursor: "|",
               }}
             />
           </TypewriterContainer>
         </Grow>
-        
+
         <Fade in={showContent} timeout={700}>
           <Box>
             <Contact />

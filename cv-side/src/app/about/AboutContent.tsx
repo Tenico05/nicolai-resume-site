@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 import { Code, Hiking, GolfCourse, Surfing } from "@mui/icons-material";
 import "../styles/theme.css";
 
-// If you need typed props, define them here:
 interface AboutContentProps {
   imageData?: Array<{ img: string; title: string }>;
 }
@@ -17,13 +16,11 @@ interface AboutContentProps {
 export default function AboutContent({ imageData = [] }: AboutContentProps) {
   const [showParagraphs, setShowParagraphs] = useState(false);
 
-  // Delayed "show" for paragraphs
   useLayoutEffect(() => {
     const timer = setTimeout(() => setShowParagraphs(true), 600);
     return () => clearTimeout(timer);
   }, []);
 
-  // Framer Motion variants
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -40,7 +37,6 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
       }}
     >
       <Container maxWidth="md">
-        {/* Title (Framer Motion) */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -82,7 +78,6 @@ export default function AboutContent({ imageData = [] }: AboutContentProps) {
 
         <Divider sx={{ borderColor: "rgba(255,255,255,0.3)", mb: 4 }} />
 
-        {/* Paragraphs (MUI Grow) */}
         <Grow in={showParagraphs} timeout={800}>
           <Box sx={{ color: "var(--color-text-light)", lineHeight: 1.7, fontSize: "1rem" }}>
             <Grid container spacing={4} alignItems="center">
